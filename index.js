@@ -44,5 +44,6 @@ module.exports = {
     'prefer-destructuring': [ERROR, { object: true, array: false }],
     // disallow unused variables
     'no-unused-vars': [ERROR],
+    'no-console': [WARN]
   }
 }
