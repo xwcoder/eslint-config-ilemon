@@ -4,5 +4,9 @@ module.exports = {
   extends: [
     'airbnb',
     './index.js'
-  ]
+  ],
+  rules: {
+    'react/prop-types': [OFF],
+    'jsx-a11y/click-events-have-key-events': [OFF],
+  }
 }

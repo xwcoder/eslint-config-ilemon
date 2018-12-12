@@ -23,8 +23,8 @@ module.exports = {
   globals: {},
   plugins: ['jest', 'sonarjs', 'import'],
   rules: {
-    // disallow reassigning function parameters
-    'no-param-reassign': [ERROR],
+    // disallow reassigning function parameters, but props
+    'no-param-reassign': [ERROR, { props: false }],
     'max-len': [WARN, { code: 120 }],
     // disallow semicolons
     'semi': [ERROR, 'never'],
@@ -34,8 +34,8 @@ module.exports = {
     'comma-dangle': [OFF],
     // allow assignment operators in conditional statements
     'no-cond-assign': [OFF],
-    // disallow the unary operators ++ and --
-    'no-plusplus': [ERROR, { allowForLoopAfterthoughts: true }],
+    // allow the unary operators ++ and --
+    'no-plusplus': [OFF],
     // disallow empty block statements
     'no-empty': [ERROR, { allowEmptyCatch: true }],
     // disallow multiple empty lines
@@ -44,6 +44,9 @@ module.exports = {
     'prefer-destructuring': [ERROR, { object: true, array: false }],
     // disallow unused variables
     'no-unused-vars': [ERROR],
-    'no-console': [WARN]
+    'no-console': [WARN],
+
+    'import/prefer-default-export': [OFF],
+    'import/no-extraneous-dependencies': [OFF]
   }
 }
